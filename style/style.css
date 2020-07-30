@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    outline: none;
+}
+
+button {
+    display: block;
+    padding: 0.5rem;
+    width: 150px;
+    cursor: pointer;
+    margin: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #2196F3;
+    color: white;
+    font-weight: 500;
+    box-shadow: -5px 3px 9px 1px #827f7f;
+    border: none;
+}
+button:focus {
+    box-shadow: 0px 0px 8px 2px blue;
+}
+
+button:disabled {
+    background-color: #62c0f3;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    min-height: 100vh;
+    max-width: 1024px;
+    width: 100%;
+
+}
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    transition: all 1s ease-in;
+    right: 0;
+    left: 0;
+}
+
+.view {
+    opacity: 0;
+    display: none;
+}
+
+.create {
+    display: none;
+    opacity: 0;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.active_page {
+    display: flex;
+    opacity: 1;
+    z-index: 1000;
+}
+
+.view__comp {
+    width: 50%;
+    min-width: 250px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list {
+
+}
+
+.item {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid #8080805c;
+}
+.item:focus {
+    background-color: #0060ff5c;
+}
+
+.img {
+    width: 50px;
+    height: 50px;
+    background-color: #8eb3b0b5;
+    padding: 0.5rem;
+    border-radius: 24px;
+}
+
+.item img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.view_btn {
+    width: 60%;
+    padding: 1rem;
+}
+
+
+.buttons {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.input {
+    width: 70%;
+}
+
+.input input {
+    max-width: 100%;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #2196F3;
+}
+
+input:focus {
+    box-shadow: 0px 0px 8px 2px blue;
+}
+
+
+

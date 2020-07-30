@@ -1,0 +1,20 @@
+{
+	"accounts": [
+		{
+			"title": "Person1",
+			"image": "img/person2.png"
+		},
+		{
+			"title": "Person3",
+			"image": "img/person2.png"
+		},
+		{
+			"title": "Person4",
+			"image": "img/person2.png"
+		},
+		{
+			"title": "Person5",
+			"image": "img/person2.png"
+		}
+	]
+}
