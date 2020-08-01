@@ -36,11 +36,6 @@ document.querySelector('.view_btn')
         document.querySelector('#text').focus()
     })
 
-document.querySelectorAll('.item')
-    .forEach(item => item.addEventListener('focusout', (e) => {
-        console.log(e)
-    }))
-
 function send(method, url, body = null) {
     const headers = {'Content-Type': 'application/json'}
     return  fetch(url, {
@@ -98,7 +93,7 @@ function addItem() {
 
     accounts.push(body)
 
-    send("PATCH", 'http://localhost:8000/refactor', accounts)
+    send("PATCH", 'http://localhost:8600/refactor', accounts)
         .then(r => {
             get('GET', url).then(data => {
                 createList(data['accounts'])
@@ -110,7 +105,7 @@ function addItem() {
 }
 
 function removeItems() {
-    send("PATCH", 'http://localhost:8000/refactor', accounts)
+    send("PATCH", 'http://localhost:8600/refactor', accounts)
         .then(r => {
             get('GET', url).then(data => {
                 createList(data['accounts'])
@@ -137,7 +132,6 @@ function focusEl(e) {
     } else if (elTarget.classList[0] === 'create_input') {
         if (e.key === 'ArrowDown') {
             let focus_c = document.querySelector('.focus_c')
-            console.log(focus_c)
             if (focus_c) focus_c.focus()
             else if (!list[1].disabled) {
                 list[1].focus()
